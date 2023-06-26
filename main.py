@@ -142,6 +142,7 @@ def anilloExterior():
     tl.trazaLinea(color='black', mapa=mainMap, new="yes", tipo=1)
 
 #principales()
+##
 anilloExterior()
 anilloInterior()
 fl.LayerControl(collapsed=False).add_to(mainMap)
