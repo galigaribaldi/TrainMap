@@ -1,26 +1,34 @@
 # TrainMap
-Mapa creado a partir de la **[APimetro](https://github.com/galigaribaldi/Apimetro)**, que es donde recibe sus datos. El mapa contempla las 12 rutas conocidas en Ciudad de México
+Mapa creado a partir de la **[APimetro](https://github.com/galigaribaldi/Apimetro)**, que es donde recibe sus datos.  
+El mapa contempla las 12 rutas conocidas en Ciudad de México, a las cuales les llamaremos **prinicipales**
 
-- Línea 1: Rosa Mexicano
-- Línea 2: Azul
-- Línea 3: Verde Olivo
-- Línea 4: Cian
-- Línea 5: Amarillo
-- Línea 6: Rojo
-- Línea 7: Naranja
-- Línea 8: Verde
-- Línea 9: Café
-- Línea A: Morado 
-- Línea B: Verde y gris
-- Línea 12: Oro
+- Línea 1: Rosa Mexicano (Observatorio Pantitlán)
+- Línea 2: Azul (Cuatro Caminos – Tasqueña)
+- Línea 3: Verde Olivo (Indios Verdes – Universidad)
+- Línea 4: Cian (Martín Carrera – Santa Anita)
+- Línea 5: Amarillo (Politécnico – Pantitlán)
+- Línea 6: Rojo (El Rosario – Martín Carrera)
+- Línea 7: Naranja (El Rosario – Barranca del Muerto)
+- Línea 8: Verde (Garibaldi/Lagunilla – Constitución de 1917)
+- Línea 9: Café (Tacubaya – Pantitlán)
+- Línea A: Morado (Pantitlán – La Paz)
+- Línea B: Verde y gris (Ciudad Azteca – Buenavista)
+- Línea 12: Dorada (Mixcoac – Tláhuac)
 
-![Plan2023](assets/Plan2023.png)
+![Plan2023](assets/Principales.png)
 
-Junto con las líneas planeadas y planteadas en 1969, las cuales contemplan las siguientes características:
+Para las periférias de la Ciudad de México se contemplan 2 anillos:
+**Periférico Interior**
+- Linea 71 Anillar Sur
+- Linea 72 Anillar Poniente
+- Linea 73 Anillar Norte
+- Linea 74 Anillar Oriente
+![Plan2023](assets/AnillarInterior.png)
 
-- Anillo Periférico Interior
-- Anillo Periférico Exterior
-- Lineas de conección entre anillos
-- Líneas de desahogue
-- Líneas principales no planteadas en Ciudad de México
+**Periférico Exterior**
+- Linea 75 Anillar Sur
+- Linea 76 Anillar Oriente
+![Plan2023](assets/AnillarExterior.png)
 
+**Mapa Anillar Completo (Interior - Exterior)**
+![Plan2023](assets/Anillares.png)
