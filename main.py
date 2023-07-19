@@ -141,7 +141,7 @@ def anilloExterior():
     tl.trazaEstaciones(data=c, mapa = mainMap, color='black', iconName='train', new="yes", tipo=1)
     tl.trazaLinea(color='black', mapa=mainMap, new="yes", tipo=1)
 
-#principales()
+principales()
 ##
 anilloExterior()
 anilloInterior()
