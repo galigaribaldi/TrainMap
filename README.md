@@ -1,7 +1,7 @@
 # TrainMap
 Mapa creado a partir de la **[APimetro](https://github.com/galigaribaldi/Apimetro)**, que es donde recibe sus datos.  
 El mapa contempla las 12 rutas conocidas en Ciudad de México, a las cuales les llamaremos **prinicipales**
-
+## Líneas Principales
 - Línea 1: Rosa Mexicano (Observatorio Pantitlán)
 - Línea 2: Azul (Cuatro Caminos – Tasqueña)
 - Línea 3: Verde Olivo (Indios Verdes – Universidad)
@@ -18,17 +18,29 @@ El mapa contempla las 12 rutas conocidas en Ciudad de México, a las cuales les 
 ![Plan2023](assets/Principales.png)
 
 Para las periférias de la Ciudad de México se contemplan 2 anillos:
-**Periférico Interior**
-- Linea 71 Anillar Sur
-- Linea 72 Anillar Poniente
-- Linea 73 Anillar Norte
-- Linea 74 Anillar Oriente
-![Plan2023](assets/AnillarInterior.png)
+## Anillo Periférico Interior (API)
+- Linea 71: Periférico Interior Sur (Negro)
+![PIS](assets/ANI/AnillarInteriorSur.png)
+- Linea 72: Periférico Interior Poniente (Gris)
+![PIP](assets//ANI/AnillarInteriorPoniente.png)
+- Linea 73: Periférico Interior Norte (Rojo)
+![PIN](assets/ANI/AnillarInteriorNorte.png)
+- Linea 74: Periférico Interior Oriente (Morado)
+![PIO](assets/ANI/AnillarInteriorOriente.png)
+**Mapa Completo del anillo Interior**
+![Plan2023](assets/ANI//AnillarInteriorCompleto.png)
 
-**Periférico Exterior**
-- Linea 75 Anillar Sur
-- Linea 76 Anillar Oriente
-![Plan2023](assets/AnillarExterior.png)
+## Anillo Periférico Exterior (APE)
+- Linea 75: Periférico Exterior Sur (Negro)
+![PES](assets/ANE/AnillarExteriorSur.png)
+- Linea 76: Periférico Exterior Poniente (Gris)
+![PEP](assets/ANE/AnillarExteriorPoniente.png)
+- Linea 77: Periférico Exterior Norte (Rojo)
+![PEN](assets/ANE/AnillarExteriorNorte.png)
+- Linea 78: Periférico Exterior Oriente (Morado)
+![PEO](assets/ANE/AnillarExteriorOriente.png)
+**Mapa Completo del anillo Exterior**
+![Plan2023](assets/ANE/AnillarExteriorCompleto.png)
 
 **Mapa Anillar Completo (Interior - Exterior)**
-![Plan2023](assets/Anillares.png)
+![Plan2023](assets/ANIANE.png)
