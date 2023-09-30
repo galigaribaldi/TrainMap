@@ -23,6 +23,7 @@ l9 = fl.FeatureGroup(name='Línea 9: Café (Tacubaya – Pantitlán)')
 lA = fl.FeatureGroup(name='Línea A: Morado (Pantitlán – La Paz)')
 lB = fl.FeatureGroup(name='Línea B: Verde y gris (Ciudad Azteca – Buenavista)')
 l12 = fl.FeatureGroup(name='Línea 12: Dorada (Mixcoac – Tláhuac)')
+l81 = fl.FeatureGroup(name='Línea 81: Verde (Tasqueña - Milpa Alta)')
 ##### Lineas Anillares Interiores
 l71 = fl.FeatureGroup(name='Linea 71 Anillar Sur')
 l72 = fl.FeatureGroup(name='Linea 72 Anillar Poniente')
@@ -34,7 +35,7 @@ l75 = fl.FeatureGroup(name='Linea 75 Anillar Exterior')
 tl = TrazaLineas()
 tl.foliums = fl
 
-def principales(lineas =[1,2,3,4,5,6,7,8,9,10,11,12]):
+def principales(lineas =[1,2,3,4,5,6,7,8,9,10,11,12, 81]):
     if 1 in lineas:
         #Linea 1
         c = getEstacion(lineaId=1)
@@ -107,6 +108,12 @@ def principales(lineas =[1,2,3,4,5,6,7,8,9,10,11,12]):
         tl.nom_grup=l12
         tl.trazaEstaciones(data=c, mapa = mainMap, color='gold', iconName='train', new="yes", tipo=1)
         tl.trazaLinea(color='gold', mapa=mainMap, new="yes", tipo=1)
+    if 81 in lineas:
+        # Linea 81
+        c = getEstacion(lineaId=81)
+        tl.nom_grup=l81
+        tl.trazaEstaciones(data=c, mapa = mainMap, color='green', iconName='train', new="yes", tipo=1)
+        tl.trazaLinea(color='green', mapa=mainMap, new="yes", tipo=1)        
     
 def anilloInterior(lineas=[71,72,73,74]):
     if 71 in lineas:
@@ -142,7 +149,7 @@ def anilloExterior(lineas=[75,76,77,78]):
         tl.trazaEstaciones(data=c, mapa = mainMap, color='black', iconName='train', new="yes", tipo=2)
         tl.trazaLinea(color='black', mapa=mainMap, new="yes", tipo=2)
     if 76 in lineas:
-        ###Linea 76 (Exterior Poniente)
+        ###Linea 76 (Exterior Oriente)
         c = getEstacion(lineaId=76)
         tl.nom_grup=l72
         tl.trazaEstaciones(data=c, mapa = mainMap, color='darkpurple', iconName='train', new="yes", tipo=2)
@@ -154,7 +161,7 @@ def anilloExterior(lineas=[75,76,77,78]):
         tl.trazaEstaciones(data=c, mapa = mainMap, color='darkred', iconName='train', new="yes", tipo=2)
         tl.trazaLinea(color='darkred', mapa=mainMap, new="yes", tipo=2)
     if 78 in lineas:
-        ###Linea 78 (Exterior Oriente)
+        ###Linea 78 (Exterior Poniente)
         c = getEstacion(lineaId=78)
         tl.nom_grup=l74
         tl.trazaEstaciones(data=c, mapa = mainMap, color='gray', iconName='train', new="yes", tipo=2)
@@ -162,7 +169,7 @@ def anilloExterior(lineas=[75,76,77,78]):
 
 #principales()
 ##
-anilloExterior(lineas=[75,76,77])
+anilloExterior()
 anilloInterior()
 fl.LayerControl(collapsed=False).add_to(mainMap)
 GroupedLayerControl(
