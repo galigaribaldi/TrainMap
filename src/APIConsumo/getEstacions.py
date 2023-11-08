@@ -1,4 +1,5 @@
 import requests
+import src.VARS as VARS
 
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
@@ -26,9 +27,9 @@ def getEstacion(nombre=None, anio=None, anio_antes=None, anio_despues=None, ciud
         
     if len(data_send) > 0:
         print("Send Response: ", data_send)
-        response = requests.request("GET", "http://localhost:5001/stc/estacion", headers=headers,params = data_send)
+        response = requests.request("GET", VARS.Production.HOST+"/stc/estacion", headers=headers,params = data_send)
     else:
-        response = requests.request("GET", "http://localhost:5001/stc/estacion", headers=headers)
+        response = requests.request("GET", VARS.Production.HOST+"/stc/estacion", headers=headers)
     return response.json()
 #c = getEstacion(lineaId=2)
 #print(c)
