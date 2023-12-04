@@ -17,7 +17,7 @@ class TrainMap():
         
     def LineasPrincipales(self, lineas =[]):
         lineasPrincipales = []
-        genericLine = fl.FeatureGroup(name = 'Principales')
+        genericLine = fl.FeatureGroup(name = 'Principales', control=False)
         if len(lineas) >0:
             for i in lineas:
                 c = getEstacion(lineaId= i)
@@ -29,7 +29,7 @@ class TrainMap():
     
     def LineasAnillaresInteriores(self, lineas =[]):
         lineasAnillaresInteriores = []
-        genericLine = fl.FeatureGroup(name = 'Anillares Interiores')
+        genericLine = fl.FeatureGroup(name = 'Anillares Interiores', control=False)
         if len(lineas) >0:
             for i in lineas:
                 c = getEstacion(lineaId= i)
@@ -41,25 +41,34 @@ class TrainMap():
     
     def LineasAnillaresExteriores(self, lineas = []):
         lineasAnillaresExteriores = []
-        genericLine = fl.FeatureGroup(name = 'Anillares Exteriores')
+        genericLine = fl.FeatureGroup(name = 'Anillares Exteriores', control=False)
         if len(lineas) >0:
             for i in lineas:
                 c = getEstacion(lineaId= i)
                 self.tl.trazaEstaciones(data=c, mapa=self.mainMap, new='yes')
                 self.tl.trazaLinea(mapa=self.mainMap, id=i, new='yes')
                 self.tl.tpgroup = genericLine 
-                lineasAnillaresExteriores.append(genericLine)        
+                lineasAnillaresExteriores.append(genericLine)
         return lineasAnillaresExteriores
     
     def LineasMetrobus(self):
         lineasMetrobus = []
+        genericLine = fl.FeatureGroup(name = 'Metrobus', control=False)
+        self.tl.tpgroup = genericLine
+        lineasMetrobus.append(genericLine)
         return lineasMetrobus
     def LineasCablebus(self):
         lineasCablebus = []
+        genericLine = fl.FeatureGroup(name = 'Cablebus', control=False)
+        self.tl.tpgroup = genericLine
+        lineasCablebus.append(genericLine)
         return lineasCablebus
     
     def LineasTrenInterUrbano(self):
         lineasInterurbanas = []
+        genericLine = fl.FeatureGroup(name = 'InterUrbano', control=False)
+        self.tl.tpgroup = genericLine
+        lineasInterurbanas.append(genericLine)        
         return lineasInterurbanas
     
     def Escritura(self, nombre='mapa_base'):
@@ -70,7 +79,7 @@ class TrainMap():
         self.LineasMetrobus()
         self.LineasCablebus()
         
-        fl.LayerControl(collapsed=False).add_to(self.mainMap)
+        fl.LayerControl(collapsed=True).add_to(self.mainMap)
         GroupedLayerControl(
             groups=
             {
@@ -79,12 +88,6 @@ class TrainMap():
                 'Líneas Inter-Urbanas': self.LineasTrenInterUrbano(),
                 'Líneas Metrobus': self.LineasMetrobus(),
                 'Líneas Cabelbus': self.LineasCablebus(),
-            },
+            }
         ).add_to(self.mainMap)
         self.mainMap.save("src/Server/templates/" + nombre +".html")
-
-#prueba = TrainMap()
-#prueba.LineasPrincipales(lineas=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12, 81])
-#prueba.LineasAnillaresInteriores(lineas=[71,72, 73, 74])
-#prueba.LineasAnillaresExteriores(lineas=[75,76, 77, 78])
-#prueba.Escritura()

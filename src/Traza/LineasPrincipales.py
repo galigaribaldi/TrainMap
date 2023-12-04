@@ -13,15 +13,11 @@ class TrazaLineas():
     def trazaEstaciones(self,data, mapa, new = "no"):
         if new == "yes":
             print("Reinicio de la lista de ubicaciones")
-            print("Antigua Lista: ", self.latlong_origin)
+            print(self.latlong_origin)
             self.latlong_origin=[]
-            print("Nueva Lista: ", self.latlong_origin)
-        print("Data!!")        
-        print(data)
-        print("Data!!")        
         for i in data:
-            self.nomGroup = self.foliums.FeatureGroup(name = TRANSPORTES[i['linea_id']]['NOMBRE'])
-            self.tpgroup= self.foliums.FeatureGroup(name=TRANSPORTES[i['linea_id']]['TIPO'])
+            self.nomGroup = self.foliums.FeatureGroup(name = TRANSPORTES[i['linea_id']]['NOMBRE'], control=False)
+            self.tpgroup= self.foliums.FeatureGroup(name=TRANSPORTES[i['linea_id']]['TIPO'], control=False)
             self.foliums.Marker(
                 location=[i['latitud'], i['longitud']],
                 icon = self.foliums.Icon(
@@ -42,7 +38,7 @@ class TrazaLineas():
             mapa.add_child(self.tpgroup)
         
     def trazaLinea(self, mapa, new="no", id=1):
-        self.tpgroup= self.foliums.FeatureGroup(name=TRANSPORTES[id]['TIPO'])
+        self.tpgroup= self.foliums.FeatureGroup(name=TRANSPORTES[id]['TIPO'], control=False)
         if new == "yes":
             print("Reinicio de la lista de ubicaciones")
             print(self.latlong_origin)

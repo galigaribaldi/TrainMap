@@ -9,9 +9,7 @@ def home():
 
 @endP1.route('/map')
 def map():
-    Dao.trazaPrincipales([1,2,3,4,5,6,7,8,9,10,11,12,81])
-    Dao.trazaAnillaresInteriores([71,72,73,74])
-    Dao.trazaAnillaresExteriores([75,76,77,78])
+    Dao.trazaCompleto([1,2,3,4,5,6,7,8,9,10,11,12,81], [71,72,73,74], [75,76,77,78])
     return render_template("mapa_base.html")
 
 @endP1.route('/map/principal')
