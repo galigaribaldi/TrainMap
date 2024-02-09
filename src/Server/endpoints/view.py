@@ -9,7 +9,7 @@ def home():
 
 @endP1.route('/map')
 def map():
-    Dao.trazaCompleto([1,2,3,4,5,6,7,8,9,10,11,12,81], [71,72,73,74], [75,76,77,78])
+    Dao.trazaCompleto([1,2,3,4,5,6,7,8,9,10,11,12,81], [71,72,73,74], [75,76,77,78], [801, 802, 803, 804])
     return render_template("mapa_base.html")
 
 @endP1.route('/map/principal')
@@ -31,3 +31,20 @@ def mapAnillarE():
     Dao.trazaAnillaresExteriores(linea)
     return render_template("anillaresExteriores.html")
 
+@endP1.route('/map/InterUrbano')
+def mapInterUrbano():
+    linea =[801, 802, 803, 804]
+    Dao.trazaInterUrbano(linea)
+    return render_template("InterUrbano.html")
+
+@endP1.route('/map/CableBus')
+def mapCableBus():
+    linea =[]
+    Dao.trazaCablebus(linea)
+    return render_template("Cablebus.html")
+
+@endP1.route('/map/Metrobus')
+def mapMetrobus():
+    linea =[]
+    Dao.trazaMetrobus(linea)
+    return render_template("Metrobus.html")

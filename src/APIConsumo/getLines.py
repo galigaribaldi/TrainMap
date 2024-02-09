@@ -10,8 +10,8 @@ def getLinea(idLine=None, colorEsp=None):
         data_send["color_esp"] = str(colorEsp)
     if len(data_send) > 0:
         print("Send Response: ", data_send)
-        response = requests.request("GET", VARS.Production.HOST+"/stc/linea", headers=headers,params = data_send)
+        response = requests.request("GET", VARS.Developer.HOST+"/stc/linea", headers=headers,params = data_send)
     else:
-        response = requests.request("GET", VARS.Production.HOST+"/stc/linea", headers=headers)
+        response = requests.request("GET", VARS.Developer.HOST+"/stc/linea", headers=headers)
     return response.json()
     

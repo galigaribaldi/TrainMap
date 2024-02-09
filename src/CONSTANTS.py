@@ -123,44 +123,72 @@ TRANSPORTES = {
         },
     73:
         {
-            'ICON': 'train',            
+            'ICON': 'train',
             'TIPO':'Anillar Interior',
             'COLOR':'darkred',
             'NOMBRE':'Linea 73 Anillar Norte',
         },
     74:
         {
-            'ICON': 'train',            
+            'ICON': 'train',
             'TIPO':'Anillar Interior',
             'COLOR':'purple',
             'NOMBRE':'Linea 74 Anillar Oriente',
         },
     75:
         {
-            'ICON': 'train',            
+            'ICON': 'train',
             'TIPO':'Anillar Exterior',
             'COLOR':'green',
             'NOMBRE':'Linea 75 Anillar Exterior Sur',
         },
     76:
         {
-            'ICON': 'train',            
+            'ICON': 'train',
             'TIPO':'Anillar Exterior',
             'COLOR':'gray',
             'NOMBRE':'Linea 76 Anillar Exterior Poniente',
         },
     77:
         {
-            'ICON': 'train',            
+            'ICON': 'train',
             'TIPO':'Anillar Exterior',
             'COLOR':'darkred',
             'NOMBRE':'Linea 77 Anillar Norte',
         },        
     78:
         {
-            'ICON': 'train',            
+            'ICON': 'train',
             'TIPO':'Anillar Exterior',
             'COLOR':'purple',
             'NOMBRE':'Linea 78 Anillar Oriente'
+        },
+    801:
+        {
+            'ICON': 'train',
+            'TIPO':'Tren InterUrbano',
+            'COLOR':'darkred',
+            'NOMBRE':'Suburbano L1'
+        },
+    802:
+        {
+            'ICON': 'train',
+            'TIPO':'Tren InterUrbano',
+            'COLOR':'darkred',
+            'NOMBRE':'Suburbano L2'
+        },
+    803:
+        {
+            'ICON': 'train',
+            'TIPO':'Tren InterUrbano',
+            'COLOR':'darkred',
+            'NOMBRE':'Suburbano L1 - Ramal B'
+        },
+    804:
+        {
+            'ICON': 'train',
+            'TIPO':'Tren InterUrbano',
+            'COLOR':'darkred',
+            'NOMBRE':'Suburbano L3'
         },                
 }

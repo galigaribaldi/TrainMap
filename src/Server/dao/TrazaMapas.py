@@ -15,9 +15,26 @@ def trazaAnillaresExteriores(linea):
     p.LineasAnillaresExteriores(linea)
     p.Escritura("anillaresExteriores")
 
-def trazaCompleto(lineaPrincipales, lineaAnillarInteior, lineaAnillarExterior):
+def trazaInterUrbano(linea):
+    p = TrainMap()
+    p.LineasTrenInterUrbano(linea)
+    p.Escritura("InterUrbano")
+
+def trazaCablebus(linea):
+    p = TrainMap()
+    p.LineasCablebus(linea)
+    p.Escritura("Cablebus")
+
+def trazaMetrobus(linea):
+    p = TrainMap()
+    p.LineasMetrobus(linea)
+    p.Escritura("Metrobus")    
+
+def trazaCompleto(lineaPrincipales, lineaAnillarInteior, lineaAnillarExterior, lineaInterUrbano):
     p = TrainMap()
     p.LineasPrincipales(lineaPrincipales)
     p.LineasAnillaresInteriores(lineaAnillarInteior)
     p.LineasAnillaresExteriores(lineaAnillarExterior)
+    p.LineasTrenInterUrbano(lineaInterUrbano)
     p.Escritura()
+
