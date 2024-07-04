@@ -190,5 +190,19 @@ TRANSPORTES = {
             'TIPO':'Tren InterUrbano',
             'COLOR':'darkred',
             'NOMBRE':'Suburbano L3'
-        },                
+        },
+    910:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L1'
+        },
+    911:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L1 (Ramal 1)'
+        },        
 }

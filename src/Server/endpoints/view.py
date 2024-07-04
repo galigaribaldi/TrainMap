@@ -9,7 +9,14 @@ def home():
 
 @endP1.route('/map')
 def map():
-    Dao.trazaCompleto([1,2,3,4,5,6,7,8,9,10,11,12,81], [71,72,73,74], [75,76,77,78], [801, 802, 803, 804])
+    Dao.trazaCompleto
+    (
+        [1,2,3,4,5,6,7,8,9,10,11,12,81], ##metro
+        [71,72,73,74], ##periferico interior
+        [75,76,77,78], ##periferico exterior
+        [801, 802, 803, 804], ## interirbano
+        [910, 911]
+        )
     return render_template("mapa_base.html")
 
 @endP1.route('/map/principal')
@@ -39,7 +46,7 @@ def mapInterUrbano():
 
 @endP1.route('/map/CableBus')
 def mapCableBus():
-    linea =[]
+    linea =[910, 911]
     Dao.trazaCablebus(linea)
     return render_template("Cablebus.html")
 
@@ -48,3 +55,12 @@ def mapMetrobus():
     linea =[]
     Dao.trazaMetrobus(linea)
     return render_template("Metrobus.html")
+
+@endP1.route('/map/proof/<int:linea_id>/<int:linea_id2>')
+def mapproof(linea_id=12, linea_id2=0):
+    if linea_id2 != 0:
+        linea =[linea_id, linea_id2]
+    else:
+        linea =[linea_id]
+    Dao.trazaInterUrbano(linea)
+    return render_template("InterUrbano.html")

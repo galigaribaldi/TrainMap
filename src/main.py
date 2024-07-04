@@ -1,5 +1,6 @@
 import folium as fl
 from folium.plugins import GroupedLayerControl
+import logging
 ##Modulos propios
 from src.APIConsumo.getEstacions import getEstacion
 from src.APIConsumo.getLines import getLinea
@@ -57,11 +58,22 @@ class TrainMap():
         self.tl.tpgroup = genericLine
         lineasMetrobus.append(genericLine)
         return lineasMetrobus
-    def LineasCablebus(self):
+    
+    def LineasCablebus(self, lineas=[]):
+        print("Lineas Cablebus")
+        logging.debug("Lineas Cablebus")
+        logging.debug("Lineas Cablebus")
+        logging.debug("Lineas Cablebus")                        
         lineasCablebus = []
         genericLine = fl.FeatureGroup(name = 'Cablebus', control=False)
-        self.tl.tpgroup = genericLine
-        lineasCablebus.append(genericLine)
+        if len(lineas) >0:
+            for i in lineas:
+                logging.info("estacion: {}".format(i))
+                c = getEstacion(lineaId= i)
+                self.tl.trazaEstaciones(data=c, mapa=self.mainMap, new='yes')
+                self.tl.trazaLinea(mapa=self.mainMap, id=i, new='yes')
+                self.tl.tpgroup = genericLine 
+                lineasCablebus.append(genericLine)
         return lineasCablebus
     
     def LineasTrenInterUrbano(self, lineas = []):
