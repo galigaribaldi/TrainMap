@@ -61,14 +61,10 @@ class TrainMap():
     
     def LineasCablebus(self, lineas=[]):
         print("Lineas Cablebus")
-        logging.debug("Lineas Cablebus")
-        logging.debug("Lineas Cablebus")
-        logging.debug("Lineas Cablebus")                        
         lineasCablebus = []
         genericLine = fl.FeatureGroup(name = 'Cablebus', control=False)
         if len(lineas) >0:
             for i in lineas:
-                logging.info("estacion: {}".format(i))
                 c = getEstacion(lineaId= i)
                 self.tl.trazaEstaciones(data=c, mapa=self.mainMap, new='yes')
                 self.tl.trazaLinea(mapa=self.mainMap, id=i, new='yes')
@@ -91,7 +87,7 @@ class TrainMap():
                 lineasInterurbanas.append(genericLine)
         return lineasInterurbanas
     
-    def Escritura(self, nombre='mapa_base'):
+    def Escritura(self, nombre='mapa'):
         self.LineasPrincipales()
         self.LineasAnillaresInteriores()
         self.LineasAnillaresExteriores()

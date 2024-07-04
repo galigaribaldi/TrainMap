@@ -8,15 +8,17 @@ def home():
     return "Works!"
 
 @endP1.route('/map')
+@endP1.route('/map/')
+@endP1.route('/map/completo')
 def map():
-    Dao.trazaCompleto
-    (
+    print("Completo")
+    Dao.trazaCompleto(
         [1,2,3,4,5,6,7,8,9,10,11,12,81], ##metro
         [71,72,73,74], ##periferico interior
         [75,76,77,78], ##periferico exterior
         [801, 802, 803, 804], ## interirbano
         [910, 911]
-        )
+    )
     return render_template("mapa_base.html")
 
 @endP1.route('/map/principal')

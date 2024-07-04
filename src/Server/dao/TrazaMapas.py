@@ -32,9 +32,10 @@ def trazaMetrobus(linea):
 
 def trazaCompleto(lineaPrincipales, lineaAnillarInteior, lineaAnillarExterior, lineaInterUrbano, lineasCablebus):
     p = TrainMap()
+    print("Mapa completo")
     p.LineasPrincipales(lineaPrincipales)
     p.LineasAnillaresInteriores(lineaAnillarInteior)
     p.LineasAnillaresExteriores(lineaAnillarExterior)
     p.LineasTrenInterUrbano(lineaInterUrbano)
     p.LineasCablebus(lineasCablebus)
-    p.Escritura()
+    p.Escritura("mapa_base")
