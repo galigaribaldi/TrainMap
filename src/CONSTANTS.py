@@ -204,5 +204,96 @@ TRANSPORTES = {
             'TIPO':'Teleférico',
             'COLOR':'lightblue',
             'NOMBRE':'CableBus L1 (Ramal 1)'
-        },        
+        },
+    920:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L2'
+        },   
+    930:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L3 Los Pinos - Vasco de Quiroga'
+        },
+    940:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L4'
+        },
+    941:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L4 (R1)'
+        },         
+    942:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L4 (R2)'
+        },
+    950:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L5'
+        },
+    960:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L6'
+        },
+    970:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L7'
+        },
+    971:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L7 (R1)'
+        },           
+    972:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L7 (R2)'
+        },
+    980:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L8'
+        },
+    990:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L9'
+        },            
+    991:
+        {
+            'ICON': 'train',
+            'TIPO':'Teleférico',
+            'COLOR':'lightblue',
+            'NOMBRE':'CableBus L9 (R1)'
+        },              
 }
