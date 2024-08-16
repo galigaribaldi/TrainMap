@@ -27,6 +27,7 @@ def map():
 
 @endP1.route('/map/Principal')
 @endP1.route('/map/principal')
+@endP1.route('/map/principales')
 def mapPrincipal():
     linea =[1,2,3,4,5,6,7,8,9,10,11,12,81]
     Dao.trazaPrincipales(linea)
