@@ -3,7 +3,7 @@ from src.main import TrainMap
 def trazaPrincipales(linea):
     p = TrainMap()
     p.LineasPrincipales(linea)
-    p.Escritura("principales")
+    p.Escritura("principales", lineaPrincipal=linea)
 
 def trazaAnillaresInteriores(linea):
     p = TrainMap()

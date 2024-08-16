@@ -86,23 +86,6 @@ class TrainMap():
                 lineasInterurbanas.append(genericLine)
         return lineasInterurbanas
     
-    def Escritura(self, nombre='mapa'):
-        self.LineasPrincipales()
-        self.LineasAnillaresInteriores()
-        self.LineasAnillaresExteriores()
-        self.LineasTrenInterUrbano()
-        self.LineasMetrobus()
-        self.LineasCablebus()
-        
+    def Escritura(self, nombre='mapa', lineaPrincipal=[]):
         fl.LayerControl(collapsed=True).add_to(self.mainMap)
-        GroupedLayerControl(
-            groups=
-            {
-                'Líneas Principales': self.LineasPrincipales(),
-                'Líneas Anillares Interiores': self.LineasAnillaresInteriores(),
-                'Líneas Inter-Urbanas': self.LineasTrenInterUrbano(),
-                'Líneas Metrobus': self.LineasMetrobus(),
-                'Líneas Cabelbus': self.LineasCablebus(),
-            }
-        ).add_to(self.mainMap)
         self.mainMap.save("src/Server/templates/" + nombre +".html")
